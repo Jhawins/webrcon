@@ -8,8 +8,8 @@
 		<input type="text" class="form-control" ng-model="Command" ng-keyup="KeyUp($event)" />
 	</form>
 	<label>
-		Set Server Rates: <select ng-change="GatherChange($event)">
-			<option disabled selected>Choose a rate</option>
+		Set Server Rates: <select ng-model="GatherRate" ng-change="GatherChange($event)">
+			<option selected>Choose a rate</option>
 			<option value="2">2X</option>
 			<option value="5">5X</option>
 			<option value="10">10X</option>

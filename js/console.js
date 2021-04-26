@@ -50,9 +50,9 @@ function ConsoleController( $scope, rconService, $timeout )
 		}
 	}
 
-	$scope.GatherChange = function (event)
+	$scope.GatherChange = function ()
 	{
-		console.log(event.target.value);
+		console.log($scope.GatherRate);
 	}
 
 	$scope.SubmitCommand = function ()
