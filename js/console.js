@@ -50,6 +50,11 @@ function ConsoleController( $scope, rconService, $timeout )
 		}
 	}
 
+	$scope.GatherChange = function (event)
+	{
+		console.log(event.target.value);
+	}
+
 	$scope.SubmitCommand = function ()
 	{
 		$scope.OnMessage( { Message: $scope.Command, Type: 'Command' } );
@@ -60,6 +65,7 @@ function ConsoleController( $scope, rconService, $timeout )
 		$scope.Command = "";
 		$scope.commandHistoryIndex = 0;
 	}
+	
 	$scope.$on( "OnMessage", function ( event, msg ) { $scope.OnMessage( msg ); } );
 
 	$scope.OnMessage = function( msg )
